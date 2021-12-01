@@ -407,20 +407,50 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <p class="modal-title-text">Оставьте свои данные, мы вам перезвоним</p>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
         <form name="modal_form" autocomplete="on" novalidate>
-          <label for="name"> Имя</label>
-          <input type="text" name="name" />
-
-          <label>Телефон </label>
-          <input type="text" name="name" />
-
-          <label>Почта </label>
-          <input type="text" name="name" />
-
-          <label>Комментарий </label>
-          <textarea name="feedback" rows="5" placeholder="Type your message here..."></textarea>
+          <div class="modal-field">
+            <label for="user-name" class="modal-form-text"> Имя</label>
+            <input id="user-name" type="text" name="user-name" class="modal-form-input" required />
+            <svg class="modal-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-people"></use>
+            </svg>
+          </div>
+          <div class="modal-field">
+            <label for="user-tel" class="modal-form-text">Телефон </label>
+            <input
+              id="user-tel"
+              type="tel"
+              name="user-tel"
+              class="modal-form-input"
+              title="+380991111111"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label for="user-email" class="modal-form-text">Почта </label>
+            <input
+              id="user-email"
+              type="email"
+              name="user-email"
+              class="modal-form-input"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label for="user-text" class="modal-form-text">Комментарий</label>
+            <textarea
+              id="user-text"
+              name="user-text"
+              class="modal-feedback"
+              placeholder="Введите текст"
+            ></textarea>
+            <label for="manual" class="modal-form-text"></label>
+            <input type="checkbox" />
+            <p class="#######">Соглашаюсь с рассылкой и принимаю <span>Условия договора</span></p>
+            <button type="submit">Отправить</button>
+          </div>
         </form>
       </div>
     </div>
