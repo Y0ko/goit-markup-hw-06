@@ -802,7 +802,7 @@ body {
 .modal-form-input:focus {
   border-color: #2196f3;
 }
-.modal-form-input:focus .modal-icon {
+.modal-form-input:focus + .modal-icon {
   fill: #2196f3;
 }
 
