@@ -286,26 +286,27 @@ body {
 .caption-item li:not(:last-child) {
   margin-right: 30px;
 }
-.image {
+.caption-image {
   display: flex;
   width: 370px;
   height: 294px;
 }
-.caption-image {
+.caption-item > li {
   position: relative;
-  overflow: hidden;
 }
-.caption-image > .thumb {
+
+.caption-title-text {
   position: absolute;
   display: flex;
   justify-self: center;
   bottom: 0;
   left: 0;
-  width: 360px;
+  width: 370px;
   height: 70px;
   padding: 27px 75px;
+  color: var(--text-white-color);
+
   background-color: rgba(47, 48, 58, 0.8);
-  color: #fff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -745,7 +746,7 @@ body {
 .modal-icon {
   position: absolute;
   left: 50px;
-  top: 90px;
+  top: 50%;
 }
 .modal-feedback::placeholder {
   font-weight: normal;
@@ -759,8 +760,6 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.16;
-
   letter-spacing: 0.01em;
-
   color: #757575;
 }
