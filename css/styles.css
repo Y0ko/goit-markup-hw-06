@@ -882,6 +882,6 @@ body {
   fill: var(--praymary-white-color);
 }
 .modal-check:checked + .check-text .check-item {
-  background-color: var(--accent-color);
+  background-color: var(--button-color);
   border: none;
 }
