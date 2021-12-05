@@ -15,7 +15,18 @@
   --title-hover: #188ce8;
   --btn-bgr: #f5f4fa;
 }
-button {
+
+.button {
+  padding: 10px 32px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 4px;
+
+  font-weight: 700;
+  line-height: 1;
+  background: var(--button-color);
+  color: var(--praymary-white-color);
   border: 0;
 }
 ul li {
@@ -659,6 +670,53 @@ body {
   justify-content: center;
   margin-left: 70px;
 }
+.footer-subscription {
+  padding-left: 93px;
+}
+.footer-subscription-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.subscription-flex {
+  display: flex;
+}
+.footer-subscription-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  padding-left: 15px;
+
+  outline: none;
+}
+.subscription-btn {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  letter-spacing: 0.06em;
+  padding: 10px 62px 10px 29px;
+  color: #ffffff;
+  position: relative;
+}
+.subscription-icon {
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  fill: var(--praymary-white-color);
+}
+/* -------------backdrop+modal--------------- */
 .backdrop {
   width: 100vw;
   height: 100vh;
@@ -718,15 +776,43 @@ body {
   width: 100%;
   align-items: center;
 }
+.input-wrap {
+  position: relative;
+}
+.modal-icon {
+  position: absolute;
+  left: 15px;
+  top: 53%;
+  transform: translateY(-50%);
+  transition: fill 300ms linear;
+}
+
 .modal-form-input {
   width: 100%;
   height: 40px;
-  padding-left: 15px;
+  padding-left: 42px;
   padding-right: 15px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border-color 300ms linear;
+  outline: none;
+}
+.modal-form-input:focus {
+  border-color: #2196f3;
+}
+.modal-form-input:focus .modal-icon {
+  fill: #2196f3;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #188ce8;
+  color: var(--text-white-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
 }
 .modal-feedback {
   width: 100%;
@@ -742,12 +828,12 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  outline: none;
 }
-.modal-icon {
-  position: absolute;
-  left: 50px;
-  top: 50%;
+.modal-feedback:focus {
+  border-color: var(--button-color);
 }
+
 .modal-feedback::placeholder {
   font-weight: normal;
   font-size: 12px;
@@ -761,5 +847,41 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--textarea-color);
+}
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+}
+.check-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: var(--textarea-color);
+}
+.check-text-color {
+  color: var(--button-color);
+  text-decoration: underline;
+}
+.check-item {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-icon {
+  fill: var(--praymary-white-color);
+}
+.modal-check:checked + .check-text .check-item {
+  background-color: var(--accent-color);
+  border: none;
 }
