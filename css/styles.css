@@ -877,6 +877,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 300ms linear;
 }
 .check-icon {
   fill: var(--praymary-white-color);
