@@ -755,6 +755,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+.modal-close:hover,
+.modal-close:focus {
+  fill: #2196f3;
+  border: 1px solidrgbaa(0, 0, 0, 0.1);
+}
 .is-hidden {
   visibility: inherit;
   opacity: 0;
@@ -848,10 +853,12 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--textarea-color);
+  padding-left: 12px;
 }
 .modal-btn {
   display: block;
   margin: 0 auto;
+  margin-top: 30px;
 }
 .check-text {
   display: flex;
